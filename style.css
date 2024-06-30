@@ -3,3 +3,13 @@
 .enter {
     white-space: pre-line;
 }
+.right {
+    margin-left: 0;
+}
+@media (min-width: 1024px) {
+    .right {
+        margin-left: 15rem;
+    }
+
+
+}
