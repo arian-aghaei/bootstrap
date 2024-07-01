@@ -1,0 +1,49 @@
+// var a= [1,2,3]
+
+// a.filter(i => i>1)
+
+var a=[1,2,3]
+
+
+function filter(array,condition){
+  let data=[];
+  
+  for(const item of array)
+    if(condition(item))
+      data.push(item)
+  
+  return data;
+}
+
+console.log(filter(a,function(item){
+  return item>
+}))
+
+
+a.filter(function(item){
+  return item>1
+})// var a= [1,2,3]
+
+// a.filter(i => i>1)
+
+var a=[1,2,3]
+
+
+function filter(array,condition){
+  let data=[];
+  
+  for(const item of array)
+    if(condition(item))
+      data.push(item)
+  
+  return data;
+}
+
+console.log(filter(a,function(item){
+  return item>
+}))
+
+
+a.filter(function(item){
+  return item>1
+ })
