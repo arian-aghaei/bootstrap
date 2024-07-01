@@ -2,8 +2,8 @@ const animals=[
     "dogs", "dogs", "Cats", "dogs", "cats", "dogs", "dogs", "ants", "ants"
 ];
 
-function template(animal) {
-    return `<div class="col-md-6 col-lg-4 p-2">
+function template(animal, index) {
+    return `<div class="col-md-6 col-lg-4 p-2" id="${animal+index}" onclick="deleting(id)">
             <div class="card">
                 <div class="card-body p-0">
                     <img src="./Untitled.svg" alt="thumbnail" class="w-100 rounded-top ">
@@ -27,12 +27,18 @@ function template(animal) {
 }
 
 
+function deleting(id){
+    console.log(id);
+    return document.getElementById(id).classList.add("d-none");
+}
+
+
 function filtering(input) {
     let data = ``;
     animals.filter( (animal) =>
         animal.includes(input)
-    ).forEach(function (animal){
-        return data += template(animal);
+    ).forEach(function (animal, index){
+        return data += template(animal, index);
     })
 
     return document.getElementById("cards").innerHTML = data
